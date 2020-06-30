@@ -363,6 +363,12 @@ public class Gui {
 		this.frame.setVisible(true);
 		this.frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 		this.frame.setLocationRelativeTo(null);
+		
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		this.frame.setPreferredSize(screenSize);
+		this.frame.setSize(screenSize);
+		this.frame.setUndecorated(true);
+		this.frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 	}
 
 	public JFrame getFrame() {
